@@ -42,13 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
+    <Compile Include="DataBaseRelations.cs" />
+    <Compile Include="DataBaseEmployees.cs" />
+    <Compile Include="DataBaseProjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\Model.csproj">
+    <ProjectReference Include="..\..\Model\Data.csproj">
       <Project>{C1B76423-460B-4748-90F4-3EDEC27B31C8}</Project>
-      <Name>Model</Name>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Infrastructure.csproj">
+      <Project>{ade50dcf-35df-4e80-ba7d-28b2f588804f}</Project>
+      <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

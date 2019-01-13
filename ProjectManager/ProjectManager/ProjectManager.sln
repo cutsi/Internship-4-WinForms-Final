@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManager", "ProjectManager.csproj", "{F53F5FEA-36B7-4CD4-8CC2-D0BE9A180795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{C1B76423-460B-4748-90F4-3EDEC27B31C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "..\Model\Data.csproj", "{C1B76423-460B-4748-90F4-3EDEC27B31C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{ADE50DCF-35DF-4E80-BA7D-28B2F588804F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Utility\Infrastructure.csproj", "{ADE50DCF-35DF-4E80-BA7D-28B2F588804F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{49C9C8C5-420D-4379-9B0C-151D646680B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Infrastructure\Domain.csproj", "{49C9C8C5-420D-4379-9B0C-151D646680B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

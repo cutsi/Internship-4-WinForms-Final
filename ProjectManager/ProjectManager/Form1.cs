@@ -17,7 +17,7 @@ namespace ProjectManager
         public Form1()
         {
             InitializeComponent();
-            Data.Init();
+            //DateBaseRelations.Init();
             
         }
 
@@ -38,15 +38,16 @@ namespace ProjectManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var employeeWindow = new employees();
-            employeeWindow.Show();
-            
+            var empWindow = new employees();
+            empWindow.Show();
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             var projectWindow = new Projects();
-            listBox1_SelectedIndexChanged(sender,EventArgs.Empty);
+           // listBox1_SelectedIndexChanged(sender,EventArgs.Empty);
             projectWindow.Show();
         }
     }

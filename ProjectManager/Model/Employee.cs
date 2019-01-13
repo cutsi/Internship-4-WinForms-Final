@@ -9,6 +9,7 @@ namespace Model
 {
     public class Employee
     {
+        
         public Employee(string firstName, string lastName, DateTime dateOfBirth, string oib, Position position)
         {
             FirstName = firstName;
@@ -23,5 +24,15 @@ namespace Model
         public DateTime DateOfBirth { get; set; }
         public string Oib { get; set; }
         public Position Position { get; set; }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName + " " + Oib;
+        }
+        public  bool CheckIfAdult()
+        {
+            return DateTime.Now.Year - DateOfBirth.Year >= 18;
+        }
     }
+
 }

@@ -22,11 +22,5 @@ namespace Utility
             str = string.Join("", str.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
             return str;
         }
-
-        public static int CheckIfAdult(DateTime birthday)
-        {
-            var dateNow = DateTime.Now;
-            return DateTime.Now.Year - birthday.Year >= 18 ? 1 : 0;
-        }
     }
 }

@@ -28,25 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.AddProject = new System.Windows.Forms.Button();
+            this.DeleteProject = new System.Windows.Forms.Button();
+            this.OverviewProject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // AddProject
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(76, 40);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(221, 276);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.AddProject.Location = new System.Drawing.Point(45, 22);
+            this.AddProject.Name = "AddProject";
+            this.AddProject.Size = new System.Drawing.Size(152, 84);
+            this.AddProject.TabIndex = 0;
+            this.AddProject.Text = "Add project";
+            this.AddProject.UseVisualStyleBackColor = true;
+            this.AddProject.Click += new System.EventHandler(this.AddProject_Click);
+            // 
+            // DeleteProject
+            // 
+            this.DeleteProject.Location = new System.Drawing.Point(45, 157);
+            this.DeleteProject.Name = "DeleteProject";
+            this.DeleteProject.Size = new System.Drawing.Size(152, 84);
+            this.DeleteProject.TabIndex = 1;
+            this.DeleteProject.Text = "Delete project";
+            this.DeleteProject.UseVisualStyleBackColor = true;
+            // 
+            // OverviewProject
+            // 
+            this.OverviewProject.Location = new System.Drawing.Point(45, 288);
+            this.OverviewProject.Name = "OverviewProject";
+            this.OverviewProject.Size = new System.Drawing.Size(152, 84);
+            this.OverviewProject.TabIndex = 2;
+            this.OverviewProject.Text = "Overview";
+            this.OverviewProject.UseVisualStyleBackColor = true;
             // 
             // Projects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.OverviewProject);
+            this.Controls.Add(this.DeleteProject);
+            this.Controls.Add(this.AddProject);
             this.Name = "Projects";
             this.Text = "Projects";
             this.ResumeLayout(false);
@@ -55,6 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button AddProject;
+        private System.Windows.Forms.Button DeleteProject;
+        private System.Windows.Forms.Button OverviewProject;
     }
 }

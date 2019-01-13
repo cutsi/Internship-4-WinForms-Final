@@ -8,16 +8,30 @@ namespace Model
 {
     public class Project
     {
-        public Project(string name, List <Tuple<Employee, int>> workers, DateTime startTime, DateTime endTime )
+        public Project(string name , DateTime startTime, DateTime endTime )
         {
             Name = name;
-            Workers = workers;
-            StarTime = startTime;
+            //Workers = workers;
+            StartTime = startTime;
             EndTime = endTime;
         }
         public string Name { get; set; }
-        public List<Tuple<Employee, int>> Workers { get; set; }
-        public DateTime StarTime { get; set; }
+        //public List<Tuple<Employee, int> Workers { get; set; }
+        public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public bool Ended()
+        {
+            return DateTime.Now > EndTime;
+        }
+        public bool Started()
+        {
+            return DateTime.Now > StartTime;
+        }
     }
 }

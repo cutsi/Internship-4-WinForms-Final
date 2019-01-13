@@ -21,15 +21,21 @@ namespace ProjectManager
 
         private void Project_Load()
         {
-            foreach (var project in Data.AllProjects)
+            /*foreach (var project in DataBaseRelations.RelationList)
             {
-                listBox1.Items.Add(project.Name);
-            }
+                listBox1.Items.Add(project.ProjectName);
+            }*/
             
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddProject_Click(object sender, EventArgs e)
+        {
+            var addProject = new AddProjectForm();
+            addProject.ShowDialog();
         }
     }
 }
