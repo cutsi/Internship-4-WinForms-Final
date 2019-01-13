@@ -37,9 +37,15 @@ namespace ProjectManager
             {
                 DataBaseRelations.RelationList.Add(new Relations(oibRegex.Match(item.ToString()).Value,
                     projectNameTextBox.Text, oibRegex.Match(item.ToString()).Value));
+                
+               // var emp = DataBaseEmployees.GetEmployee(oibRegex.Match(item.ToString()).Value);
+                //DataBaseEmployees.ListEmployees.Add(new Employee(emp.FirstName, emp.LastName,emp.DateOfBirth, oibRegex.ToString(), emp.Position));
             }
             DataBaseProjects.ListProjects.Add(new Project(projectNameTextBox.Text,dateTimePicker1.Value,
                 dateTimePicker2.Value));
+            
+            
+            
             Close();
         }
     }

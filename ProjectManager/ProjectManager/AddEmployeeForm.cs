@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Infrastructure;
 using Model;
 using Model.Enums;
+using Utility;
 
 namespace ProjectManager
 {
@@ -34,12 +35,17 @@ namespace ProjectManager
         
         private void Save_Click(object sender, EventArgs e)
         {
-            /*if (string.IsNullOrWhiteSpace(OibTextbox.Text) ||
-                string.IsNullOrWhiteSpace(FirstNametextbox.Text))
+            if (string.IsNullOrWhiteSpace(OibTextbox.Text) ||
+                string.IsNullOrWhiteSpace(FirstNametextbox.Text) || string.IsNullOrWhiteSpace(LastNametextbox.Text) || 
+                string.IsNullOrWhiteSpace(JobComboBox.Text) || string.IsNullOrWhiteSpace(HoursTextbox.Text) || 
+                Functions.ValidOib(OibTextbox.Text)==false)
             {
-                
-            }*/
-
+                var errorBox = new ErrorWindow();
+                errorBox.ShowDialog();
+                Close();
+                return;
+            }
+            
             foreach (var item in ProjectListBox.CheckedItems)
             {
                 DataBaseRelations.RelationList.Add(new Relations(OibTextbox.Text, item.ToString(), HoursTextbox.Text));
@@ -61,6 +67,11 @@ namespace ProjectManager
         }
 
         private void ProjectListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddEmployeeForm_Load(object sender, EventArgs e)
         {
 
         }

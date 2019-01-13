@@ -60,6 +60,7 @@
             this.Edit.TabIndex = 2;
             this.Edit.Text = "Edit";
             this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Overview
             // 

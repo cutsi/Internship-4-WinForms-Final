@@ -191,6 +191,7 @@
             this.Controls.Add(this.OibTextbox);
             this.Name = "AddEmployeeForm";
             this.Text = "AddEmployeeForm";
+            this.Load += new System.EventHandler(this.AddEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

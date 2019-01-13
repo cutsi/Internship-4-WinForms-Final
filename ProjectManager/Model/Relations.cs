@@ -15,10 +15,18 @@ namespace Model
             ProjectName = projectName;
             Hours = hours;
         }
+        public Relations(string oib, string projectName)
+        {
+            Oib = oib;
+            ProjectName = projectName;
+            
+        }
 
         //2 liste i povezivanje
         public string Oib { get; set; }
         public string ProjectName { get; set; }
         public string Hours { get; set; }
+
+        
     }
 }

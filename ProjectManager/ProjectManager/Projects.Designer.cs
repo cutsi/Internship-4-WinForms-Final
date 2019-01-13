@@ -51,6 +51,7 @@
             this.DeleteProject.TabIndex = 1;
             this.DeleteProject.Text = "Delete project";
             this.DeleteProject.UseVisualStyleBackColor = true;
+            this.DeleteProject.Click += new System.EventHandler(this.DeleteProject_Click);
             // 
             // OverviewProject
             // 
@@ -60,6 +61,7 @@
             this.OverviewProject.TabIndex = 2;
             this.OverviewProject.Text = "Overview";
             this.OverviewProject.UseVisualStyleBackColor = true;
+            this.OverviewProject.Click += new System.EventHandler(this.OverviewProject_Click);
             // 
             // Projects
             // 

@@ -12,9 +12,9 @@ namespace Infrastructure
     {
         public static List<Employee> ListEmployees = new List<Employee>()
         {
-            new Employee("ivan", "ivic", new DateTime(1995, 5, 4), "65465407751", Position.Accountant),
+            new Employee("ivan", "ivic", new DateTime(1995, 5, 4), "65465407751", Position.Programmer),
             new Employee("mate", "ivic", new DateTime(1995, 5, 4), "65465404684", Position.Accountant),
-            new Employee("ante", "ivic", new DateTime(1995, 5, 4), "65465405456", Position.Accountant)
+            new Employee("ante", "ivic", new DateTime(1995, 5, 4), "65465405456", Position.Secretary)
         };
         //dobit po oibu ciloga emploija 
 

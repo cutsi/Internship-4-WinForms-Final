@@ -20,7 +20,13 @@ namespace ProjectManager
         public Overview()
         {
             InitializeComponent();
+            RefreshListbox();
             
+        }
+
+        public void RefreshListbox()
+        {
+            checkedListBoxOverview.Items.Clear();
             foreach (var employee in DataBaseEmployees.ListEmployees)
             {
 
@@ -49,6 +55,19 @@ namespace ProjectManager
         private void Overview_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            var oibRegex = new Regex(@"\d{11}");
+            foreach (var emp in checkedListBoxOverview.CheckedItems)
+            {
+                var empOib = oibRegex.Match(emp.ToString()).Value;
+                var overViewEmp = new EditEmployeeForm(DataBaseEmployees.GetEmployee(empOib));
+                overViewEmp.ShowDialog();
+            }
+
+            RefreshListbox();
         }
     }
 }

@@ -65,17 +65,47 @@
     <Compile Include="DeleteEmployee.Designer.cs">
       <DependentUpon>DeleteEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProjectForm.Designer.cs">
+      <DependentUpon>DeleteProjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Details.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetailsProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsProject.Designer.cs">
+      <DependentUpon>DetailsProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProjectForm.Designer.cs">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="employees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="employees.Designer.cs">
       <DependentUpon>employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorWindow.Designer.cs">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,6 +118,12 @@
     </Compile>
     <Compile Include="Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overview_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overview_project.Designer.cs">
+      <DependentUpon>Overview_project.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Projects.cs">
@@ -106,17 +142,35 @@
     <EmbeddedResource Include="DeleteEmployee.resx">
       <DependentUpon>DeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProjectForm.resx">
+      <DependentUpon>DeleteProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetailsProject.resx">
+      <DependentUpon>DetailsProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProjectForm.resx">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employees.resx">
       <DependentUpon>employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorWindow.resx">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overview_project.resx">
+      <DependentUpon>Overview_project.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Projects.resx">
       <DependentUpon>Projects.cs</DependentUpon>

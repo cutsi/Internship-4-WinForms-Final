@@ -17,6 +17,30 @@ namespace Infrastructure
             new Relations("65465405456", "google", "30")
         };
 
+        public static Relations GetRelation(string projectName, string oib)
+        {
+            foreach (var relation in RelationList)
+            {
+                if (relation.ProjectName == projectName && relation.Oib == oib)
+                {
+                    return relation;
+                }
+            }
+
+            return null;
+        }
+
+        public static List<Relations> GetRelationByName(string projectName)
+        {
+            var relationList = new List<Relations>();
+            foreach (var relation in RelationList)
+            {
+                if (relation.ProjectName == projectName)
+                    relationList.Add(relation);
+            }
+
+            return relationList;
+        }
         public static List<Project> GetEmployeesProjects(string oib)
         {
             var projectList = new List<Project>();
@@ -45,7 +69,17 @@ namespace Infrastructure
             return relationList;
         }
 
-        public static int GetHours(string oib)
+        public static int GetHoursFromRelation(string projectName, string oib)
+        {
+            foreach (var relation in RelationList)
+            {
+                if (relation.ProjectName == projectName && relation.Oib == oib)
+                    return int.Parse(relation.Hours);
+            }
+
+            return 0;
+        }
+        public static int GetHoursByWeek(string oib)
         {
             var hours = 0;
             foreach (var item in GetEmployeeRelations(oib))
@@ -53,6 +87,17 @@ namespace Infrastructure
                 
                 if(DataBaseProjects.GetProject(item.ProjectName).Started() && !DataBaseProjects.GetProject(item.ProjectName).Ended())
                     hours += int.Parse(item.Hours);
+            }
+
+            return hours;
+        }
+
+        public static int GetHours(string oib)
+        {
+            var hours = 0;
+            foreach (var item in GetEmployeeRelations(oib))
+            {
+                hours += int.Parse(item.Hours);
             }
 
             return hours;

@@ -37,5 +37,17 @@ namespace ProjectManager
             var addProject = new AddProjectForm();
             addProject.ShowDialog();
         }
+
+        private void OverviewProject_Click(object sender, EventArgs e)
+        {
+            var overviewWindow = new Overview_project();
+            overviewWindow.ShowDialog();
+        }
+
+        private void DeleteProject_Click(object sender, EventArgs e)
+        {
+            var deleteWindow = new DeleteProjectForm();
+            deleteWindow.ShowDialog();
+        }
     }
 }

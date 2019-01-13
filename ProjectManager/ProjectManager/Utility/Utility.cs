@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public static class Class1
+    public static class Functions
     {
         public static string CapitalizeName(string firstName, string lastName)
         {
@@ -21,6 +21,13 @@ namespace Utility
         {
             str = string.Join("", str.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
             return str;
+        }
+
+        public static bool ValidOib(string oib)
+        {
+            if (oib.Length == 11)
+                return true;
+            return false;
         }
     }
 }
