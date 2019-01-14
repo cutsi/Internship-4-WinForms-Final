@@ -32,6 +32,8 @@ namespace ProjectManager
             birthdayBox.Text = ToViewEmployee.DateOfBirth.ToString();
             positionBox.Text = ToViewEmployee.Position.ToString();
             workHoursBox.Text = DataBaseRelations.GetHours(ToViewEmployee.Oib).ToString();
+            
+            ColorTheButton(int.Parse(workHoursBox.Text));
 
             foreach (var project in DataBaseRelations.GetEmployeesProjects(ToViewEmployee.Oib))
             {
@@ -47,6 +49,22 @@ namespace ProjectManager
                 {
                     plannedProjectsListbox.Items.Add(project.Name);
                 }
+            }
+        }
+
+        public void ColorTheButton(int hours)
+        {
+            if (hours < 30)
+            {
+                workIndicator.BackColor = Color.Yellow;
+            }
+            else if (hours < 40)
+            {
+                workIndicator.BackColor = Color.Green;
+            }
+            else
+            {
+                workIndicator.BackColor = Color.Red;
             }
         }
     }

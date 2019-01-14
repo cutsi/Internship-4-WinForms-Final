@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infrastructure;
+using Utility;
 
 namespace ProjectManager
 {
@@ -19,20 +20,13 @@ namespace ProjectManager
             InitializeComponent();
             foreach (var employee in DataBaseEmployees.ListEmployees)
             {
-                
-                EmpListBox.Items.Add(employee);
+                Functions.RemoveWhitespaces(employee.FirstName);
+                Functions.RemoveWhitespaces(employee.LastName);
+                EmpListBox.Items.Add(Functions.CapitalizeName(employee.FirstName) + " " + Functions.CapitalizeName(employee.LastName) + " " + employee.Oib);
                 
             }
         }
-
-        private void DelEmployee()
-        {
-
-        }
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public void DeleteEmployeeButton_Click(object sender, EventArgs e)
         {
@@ -47,9 +41,6 @@ namespace ProjectManager
 
                 //break;
             }
-
-
-
             Refresh();
         }
         private new void Refresh()
@@ -61,10 +52,6 @@ namespace ProjectManager
                 EmpListBox.Items.Add(employee);
             }
         }
-
-        private void DeleteEmployee_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

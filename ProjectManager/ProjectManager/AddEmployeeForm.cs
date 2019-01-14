@@ -51,7 +51,15 @@ namespace ProjectManager
                 DataBaseRelations.RelationList.Add(new Relations(OibTextbox.Text, item.ToString(), HoursTextbox.Text));
             }
 
-            DataBaseEmployees.ListEmployees.Add(new Employee(FirstNametextbox.Text, LastNametextbox.Text,
+            if (!Functions.CheckAge(birthTimePicker.Value))
+            {
+                var errorBox = new ErrorWindow();
+                errorBox.ShowDialog();
+                Close();
+                return;
+            }
+
+            DataBaseEmployees.ListEmployees.Add(new Employee(Functions.CapitalizeName(FirstNametextbox.Text), Functions.CapitalizeName(LastNametextbox.Text),
                 birthTimePicker.Value, OibTextbox.Text, (Position) Enum.Parse(typeof(Position), JobComboBox.Text)));
             Close();
         }

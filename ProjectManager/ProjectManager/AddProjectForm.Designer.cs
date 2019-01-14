@@ -52,7 +52,7 @@
             this.employeeCheckedListbox.Name = "employeeCheckedListbox";
             this.employeeCheckedListbox.Size = new System.Drawing.Size(214, 276);
             this.employeeCheckedListbox.TabIndex = 1;
-            this.employeeCheckedListbox.SelectedIndexChanged += new System.EventHandler(this.employeeCheckedListbox_SelectedIndexChanged);
+            //this.employeeCheckedListbox.SelectedIndexChanged += new System.EventHandler(this.employeeCheckedListbox_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 

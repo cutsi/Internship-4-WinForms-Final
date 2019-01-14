@@ -12,9 +12,9 @@ namespace Infrastructure
     {
         public static List<Relations> RelationList = new List<Relations>()
         {
-            new Relations("65465404684", "youtube", "10"),
-            new Relations("65465407751", "facebook", "20"),
-            new Relations("65465405456", "google", "30")
+            new Relations("65465404684", "Youtube", "10"),
+            new Relations("65465407751", "Facebook", "20"),
+            new Relations("65465405456", "Google", "30")
         };
 
         public static Relations GetRelation(string projectName, string oib)
@@ -30,6 +30,19 @@ namespace Infrastructure
             return null;
         }
 
+        public static bool CheckIfLast(string oib)
+        {
+            var counter = 0;
+            foreach (var relation in RelationList)
+            {
+                if (relation.Oib == oib)
+                    counter++;
+            }
+
+            if (counter == 1)
+                return false;
+            return true;
+        }
         public static List<Relations> GetRelationByName(string projectName)
         {
             var relationList = new List<Relations>();

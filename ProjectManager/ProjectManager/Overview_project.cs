@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utility;
 
 namespace ProjectManager
 {
@@ -16,27 +17,21 @@ namespace ProjectManager
         public Overview_project()
         {
             InitializeComponent();
-            foreach (var project in DataBaseProjects.ListProjects)
-            {
-                projectCheckedListbox.Items.Add(project);
-
-            }
+            RefreshProjectListbox();
         }
+
         public void RefreshProjectListbox()
         {
             projectCheckedListbox.Items.Clear();
             foreach (var project in DataBaseProjects.ListProjects)
             {
-
-                projectCheckedListbox.Items.Add(project);
+                Functions.RemoveWhitespaces(project.Name);
+                Functions.CapitalizeName(project.Name);
+                projectCheckedListbox.Items.Add(project.Name);
 
             }
         }
-
-        private void Overview_project_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void detailsButton_Click(object sender, EventArgs e)
         {

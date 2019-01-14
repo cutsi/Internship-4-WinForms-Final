@@ -39,7 +39,7 @@
             this.EmpListBox.Name = "EmpListBox";
             this.EmpListBox.Size = new System.Drawing.Size(179, 242);
             this.EmpListBox.TabIndex = 0;
-            this.EmpListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            //this.EmpListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // DeleteEmployeeButton
             // 
@@ -60,7 +60,7 @@
             this.Controls.Add(this.EmpListBox);
             this.Name = "DeleteEmployee";
             this.Text = "DeleteEmployee";
-            this.Load += new System.EventHandler(this.DeleteEmployee_Load);
+            //this.Load += new System.EventHandler(this.DeleteEmployee_Load);
             this.ResumeLayout(false);
 
         }

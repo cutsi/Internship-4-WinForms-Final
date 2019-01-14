@@ -71,7 +71,7 @@
             this.Controls.Add(this.projectCheckedListbox);
             this.Name = "Overview_project";
             this.Text = "Overview_project";
-            this.Load += new System.EventHandler(this.Overview_project_Load);
+            //this.Load += new System.EventHandler(this.Overview_project_Load);
             this.ResumeLayout(false);
 
         }

@@ -40,7 +40,7 @@
             this.checkedListBoxOverview.Name = "checkedListBoxOverview";
             this.checkedListBoxOverview.Size = new System.Drawing.Size(228, 276);
             this.checkedListBoxOverview.TabIndex = 0;
-            this.checkedListBoxOverview.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxOverview_SelectedIndexChanged);
+            //this.checkedListBoxOverview.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxOverview_SelectedIndexChanged);
             // 
             // Details
             // 
@@ -72,7 +72,7 @@
             this.Controls.Add(this.checkedListBoxOverview);
             this.Name = "Overview";
             this.Text = "Overview";
-            this.Load += new System.EventHandler(this.Overview_Load);
+            //this.Load += new System.EventHandler(this.Overview_Load);
             this.ResumeLayout(false);
 
         }

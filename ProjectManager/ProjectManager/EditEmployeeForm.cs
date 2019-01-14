@@ -72,11 +72,16 @@ namespace ProjectManager
             {
                 if (DataBaseRelations.GetRelation(item.ToString(), ToViewEmployee.Oib) != null)
                 {
-                    //provjera je l zadnji
-                    //if(brojemployeeanaprojektu == 1)  {
-                    //error
-                    //continue;
-                    //}
+                    //provjera je li zadnji
+                    if (DataBaseRelations.CheckIfLast(ToViewEmployee.Oib) == false)
+                    {
+                        var errorBox = new ErrorWindow();
+                        errorBox.ShowDialog();
+                        Close();
+                        return;
+                    }
+
+                    
                     DataBaseRelations.RelationList.Remove(
                         DataBaseRelations.GetRelation(item.ToString(), ToViewEmployee.Oib));
                 }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infrastructure;
 using Model;
+using Utility;
 using static ProjectManager.Details;
 namespace ProjectManager
 {
@@ -29,16 +30,14 @@ namespace ProjectManager
             checkedListBoxOverview.Items.Clear();
             foreach (var employee in DataBaseEmployees.ListEmployees)
             {
-
-                checkedListBoxOverview.Items.Add(employee);
+                Functions.RemoveWhitespaces(employee.FirstName);
+                Functions.RemoveWhitespaces(employee.LastName);
+                checkedListBoxOverview.Items.Add(Functions.CapitalizeName(employee.FirstName) + " " + 
+                                                 Functions.CapitalizeName(employee.LastName) + " " + employee.Oib);
 
             }
         }
-
-        public void checkedListBoxOverview_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Details_Click(object sender, EventArgs e)
         {
@@ -51,12 +50,7 @@ namespace ProjectManager
             }
             
         }
-
-        private void Overview_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void Edit_Click(object sender, EventArgs e)
         {
             var oibRegex = new Regex(@"\d{11}");

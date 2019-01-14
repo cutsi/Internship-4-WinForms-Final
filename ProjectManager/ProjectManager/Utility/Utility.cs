@@ -9,12 +9,12 @@ namespace Utility
 {
     public static class Functions
     {
-        public static string CapitalizeName(string firstName, string lastName)
+        public static string CapitalizeName(string capName)
         {
-            firstName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(firstName.ToLower());
-            lastName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(lastName.ToLower());
-            var name = firstName + " " + lastName;
-            return name;
+            capName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(capName.ToLower());
+            
+            
+            return capName;
         }
 
         public static string RemoveWhitespaces(string str)
@@ -28,6 +28,11 @@ namespace Utility
             if (oib.Length == 11)
                 return true;
             return false;
+        }
+
+        public static bool CheckAge(DateTime birthday)
+        {
+            return DateTime.Now.Year - birthday.Year >=18;
         }
     }
 }

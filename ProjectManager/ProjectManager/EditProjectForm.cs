@@ -15,7 +15,7 @@ namespace ProjectManager
 {
     public partial class EditProjectForm : Form
     {
-        private Project ToEditProject { get; set; }
+        private readonly Project ToEditProject;
         public EditProjectForm(Project toEditProject)
         {
             InitializeComponent();
@@ -78,8 +78,8 @@ namespace ProjectManager
             foreach (var item in employeeCheckedListbox.CheckedItems)
             {
                 var empOib = oibRegex.Match(item.ToString()).Value;
-                var hours = DataBaseRelations.GetHoursFromRelation(item.ToString(), empOib);
-                DataBaseRelations.RelationList.Add(new Relations(empOib, item.ToString(), hours.ToString()));
+                var hours = DataBaseRelations.GetHoursFromRelation(ToEditProject.Name, empOib);
+                DataBaseRelations.RelationList.Add(new Relations(empOib, ToEditProject.Name, hours.ToString()));
 
             }
 

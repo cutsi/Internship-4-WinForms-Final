@@ -35,12 +35,6 @@
             this.accoutantComboBox = new System.Windows.Forms.ComboBox();
             this.designerComboBox = new System.Windows.Forms.ComboBox();
             this.marketingComboBox = new System.Windows.Forms.ComboBox();
-            this.programmerHoursTextbox = new System.Windows.Forms.TextBox();
-            this.secretaryHoursTextbox = new System.Windows.Forms.TextBox();
-            this.accoutantHoursTextbox = new System.Windows.Forms.TextBox();
-            this.designerHoursTextbox = new System.Windows.Forms.TextBox();
-            this.marketingHoursTextBox = new System.Windows.Forms.TextBox();
-            this.ProjectEditbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // projectNameTextbox
@@ -97,61 +91,11 @@
             this.marketingComboBox.Size = new System.Drawing.Size(173, 24);
             this.marketingComboBox.TabIndex = 6;
             // 
-            // programmerHoursTextbox
-            // 
-            this.programmerHoursTextbox.Location = new System.Drawing.Point(678, 40);
-            this.programmerHoursTextbox.Name = "programmerHoursTextbox";
-            this.programmerHoursTextbox.Size = new System.Drawing.Size(25, 22);
-            this.programmerHoursTextbox.TabIndex = 7;
-            // 
-            // secretaryHoursTextbox
-            // 
-            this.secretaryHoursTextbox.Location = new System.Drawing.Point(678, 105);
-            this.secretaryHoursTextbox.Name = "secretaryHoursTextbox";
-            this.secretaryHoursTextbox.Size = new System.Drawing.Size(25, 22);
-            this.secretaryHoursTextbox.TabIndex = 8;
-            // 
-            // accoutantHoursTextbox
-            // 
-            this.accoutantHoursTextbox.Location = new System.Drawing.Point(678, 171);
-            this.accoutantHoursTextbox.Name = "accoutantHoursTextbox";
-            this.accoutantHoursTextbox.Size = new System.Drawing.Size(25, 22);
-            this.accoutantHoursTextbox.TabIndex = 9;
-            // 
-            // designerHoursTextbox
-            // 
-            this.designerHoursTextbox.Location = new System.Drawing.Point(678, 241);
-            this.designerHoursTextbox.Name = "designerHoursTextbox";
-            this.designerHoursTextbox.Size = new System.Drawing.Size(25, 22);
-            this.designerHoursTextbox.TabIndex = 10;
-            // 
-            // marketingHoursTextBox
-            // 
-            this.marketingHoursTextBox.Location = new System.Drawing.Point(678, 308);
-            this.marketingHoursTextBox.Name = "marketingHoursTextBox";
-            this.marketingHoursTextBox.Size = new System.Drawing.Size(25, 22);
-            this.marketingHoursTextBox.TabIndex = 11;
-            // 
-            // ProjectEditbutton
-            // 
-            this.ProjectEditbutton.Location = new System.Drawing.Point(108, 255);
-            this.ProjectEditbutton.Name = "ProjectEditbutton";
-            this.ProjectEditbutton.Size = new System.Drawing.Size(211, 76);
-            this.ProjectEditbutton.TabIndex = 12;
-            this.ProjectEditbutton.Text = "button1";
-            this.ProjectEditbutton.UseVisualStyleBackColor = true;
-            // 
             // DetailsProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ProjectEditbutton);
-            this.Controls.Add(this.marketingHoursTextBox);
-            this.Controls.Add(this.designerHoursTextbox);
-            this.Controls.Add(this.accoutantHoursTextbox);
-            this.Controls.Add(this.secretaryHoursTextbox);
-            this.Controls.Add(this.programmerHoursTextbox);
             this.Controls.Add(this.marketingComboBox);
             this.Controls.Add(this.designerComboBox);
             this.Controls.Add(this.accoutantComboBox);
@@ -176,11 +120,5 @@
         private System.Windows.Forms.ComboBox accoutantComboBox;
         private System.Windows.Forms.ComboBox designerComboBox;
         private System.Windows.Forms.ComboBox marketingComboBox;
-        private System.Windows.Forms.TextBox programmerHoursTextbox;
-        private System.Windows.Forms.TextBox secretaryHoursTextbox;
-        private System.Windows.Forms.TextBox accoutantHoursTextbox;
-        private System.Windows.Forms.TextBox designerHoursTextbox;
-        private System.Windows.Forms.TextBox marketingHoursTextBox;
-        private System.Windows.Forms.Button ProjectEditbutton;
     }
 }

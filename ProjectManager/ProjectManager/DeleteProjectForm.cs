@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Infrastructure;
+using Utility;
 
 namespace ProjectManager
 {
@@ -18,7 +19,8 @@ namespace ProjectManager
             InitializeComponent();
             foreach (var project in DataBaseProjects.ListProjects)
             {
-                projectCheckBox.Items.Add(project);
+                Functions.RemoveWhitespaces(project.Name);
+                projectCheckBox.Items.Add(Functions.CapitalizeName(project.Name));
             }
         }
 

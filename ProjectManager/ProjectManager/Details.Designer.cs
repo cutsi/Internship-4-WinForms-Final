@@ -43,12 +43,16 @@
             this.workHoursBox = new System.Windows.Forms.TextBox();
             this.projectsInWorkingListbox = new System.Windows.Forms.ListBox();
             this.plannedProjectsListbox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameBox
             // 
             this.nameBox.Location = new System.Drawing.Point(106, 40);
             this.nameBox.Name = "nameBox";
+            this.nameBox.ReadOnly = true;
             this.nameBox.Size = new System.Drawing.Size(253, 22);
             this.nameBox.TabIndex = 0;
             // 
@@ -56,6 +60,7 @@
             // 
             this.oibBox.Location = new System.Drawing.Point(106, 95);
             this.oibBox.Name = "oibBox";
+            this.oibBox.ReadOnly = true;
             this.oibBox.Size = new System.Drawing.Size(253, 22);
             this.oibBox.TabIndex = 1;
             // 
@@ -72,6 +77,7 @@
             // 
             this.birthdayBox.Location = new System.Drawing.Point(106, 149);
             this.birthdayBox.Name = "birthdayBox";
+            this.birthdayBox.ReadOnly = true;
             this.birthdayBox.Size = new System.Drawing.Size(253, 22);
             this.birthdayBox.TabIndex = 3;
             // 
@@ -79,6 +85,7 @@
             // 
             this.positionBox.Location = new System.Drawing.Point(106, 198);
             this.positionBox.Name = "positionBox";
+            this.positionBox.ReadOnly = true;
             this.positionBox.Size = new System.Drawing.Size(253, 22);
             this.positionBox.TabIndex = 4;
             // 
@@ -148,6 +155,7 @@
             // 
             this.workHoursBox.Location = new System.Drawing.Point(106, 258);
             this.workHoursBox.Name = "workHoursBox";
+            this.workHoursBox.ReadOnly = true;
             this.workHoursBox.Size = new System.Drawing.Size(253, 22);
             this.workHoursBox.TabIndex = 12;
             // 
@@ -169,11 +177,41 @@
             this.plannedProjectsListbox.Size = new System.Drawing.Size(244, 132);
             this.plannedProjectsListbox.TabIndex = 14;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(385, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "finished projects";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(397, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 17);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "project in work";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(385, 341);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "planned projects";
+            // 
             // Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.plannedProjectsListbox);
             this.Controls.Add(this.projectsInWorkingListbox);
             this.Controls.Add(this.workHoursBox);
@@ -214,5 +252,8 @@
         private System.Windows.Forms.TextBox workHoursBox;
         private System.Windows.Forms.ListBox projectsInWorkingListbox;
         private System.Windows.Forms.ListBox plannedProjectsListbox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

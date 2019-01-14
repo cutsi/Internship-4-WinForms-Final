@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Infrastructure;
 using Model;
+using Utility;
 
 namespace ProjectManager
 {
@@ -21,31 +22,27 @@ namespace ProjectManager
             InitializeComponent();
             foreach (var employee in DataBaseEmployees.ListEmployees)
             {
-                employeeCheckedListbox.Items.Add(employee.FirstName + " " + employee.LastName);
+                Functions.RemoveWhitespaces(employee.FirstName);
+                Functions.RemoveWhitespaces(employee.LastName);
+                employeeCheckedListbox.Items.Add(Functions.CapitalizeName(employee.FirstName) + " " + Functions.CapitalizeName(employee.LastName));
             }
         }
-
-        private void employeeCheckedListbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void saveButton_Click(object sender, EventArgs e)
         {
             var oibRegex = new Regex(@"\d{11}");
             foreach (var item in employeeCheckedListbox.CheckedItems)
             {
+                
+                Functions.RemoveWhitespaces(projectNameTextBox.Text);
                 DataBaseRelations.RelationList.Add(new Relations(oibRegex.Match(item.ToString()).Value,
-                    projectNameTextBox.Text, oibRegex.Match(item.ToString()).Value));
+                    Functions.CapitalizeName(projectNameTextBox.Text), oibRegex.Match(item.ToString()).Value));
                 
                // var emp = DataBaseEmployees.GetEmployee(oibRegex.Match(item.ToString()).Value);
                 //DataBaseEmployees.ListEmployees.Add(new Employee(emp.FirstName, emp.LastName,emp.DateOfBirth, oibRegex.ToString(), emp.Position));
             }
             DataBaseProjects.ListProjects.Add(new Project(projectNameTextBox.Text,dateTimePicker1.Value,
                 dateTimePicker2.Value));
-            
-            
-            
             Close();
         }
     }
